@@ -1,0 +1,14 @@
+name,description,formula,group
+stv_ltv_ratio,Short-to-Long-term variability ratio,MSTV/MLTV,variability
+variability_spread,Difference between LTV and STV,MLTV - MSTV,variability
+abnormal_stv_ltv_ratio,Abnormal STV to LTV percent ratio,ASTV/ALTV,variability
+decel_severity,Weighted deceleration severity score,(1*DL + 2*DS + 3*DP)/(DL+DS+DP),deceleration
+accel_per_uc,Accelerations per uterine contraction,AC/(UC+1),acceleration
+accel_per_stv,Accelerations relative to STV,AC/MSTV,acceleration
+baseline_stability,Inverse long-term variability as stability,1/(1+MLTV),baseline
+baseline_mode_gap,Absolute gap between baseline and mode,|LB-Mode|,baseline
+trend_strength,Absolute histogram tendency as trend strength,|Tendency|,trend
+trend_direction,Direction of trend from histogram tendency,sign(Tendency),trend
+fhr_uc_interaction,Interaction of baseline FHR and uterine contractions,LB*UC,interaction
+ac_baseline_ratio,Accelerations relative to baseline FHR,AC/LB,interaction
+decel_variability_ratio,Decelerations relative to variability,(DL+DS+DP)/(MSTV+MLTV),interaction

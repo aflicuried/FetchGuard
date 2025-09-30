@@ -1,0 +1,51 @@
+type,column,count
+missing_values,Unnamed: 0,3.0
+missing_values,Unnamed: 1,3.0
+missing_values,Unnamed: 2,3.0
+missing_values,Unnamed: 3,2.0
+missing_values,Unnamed: 4,2.0
+missing_values,Unnamed: 5,1.0
+missing_values,Unnamed: 6,1.0
+missing_values,Unnamed: 7,1.0
+missing_values,Unnamed: 8,1.0
+missing_values,Unnamed: 9,2130.0
+missing_values,1,3.0
+missing_values,2,3.0
+missing_values,3,2.0
+missing_values,4,2.0
+missing_values,5,1.0
+missing_values,6,1.0
+missing_values,7,1.0
+missing_values,8,2.0
+missing_values,9,2.0
+missing_values,10,2.0
+missing_values,11,2.0
+missing_values,12,3.0
+missing_values,13,3.0
+missing_values,14,3.0
+missing_values,15,3.0
+missing_values,16,3.0
+missing_values,17,3.0
+missing_values,18,3.0
+missing_values,19,3.0
+missing_values,20,3.0
+missing_values,21,3.0
+missing_values,Unnamed: 31,2130.0
+missing_values,Unnamed: 32,2.0
+missing_values,Unnamed: 33,2.0
+missing_values,Unnamed: 34,2.0
+missing_values,Unnamed: 35,2.0
+missing_values,Unnamed: 36,2.0
+missing_values,Unnamed: 37,2.0
+missing_values,Unnamed: 38,2.0
+missing_values,Unnamed: 39,2.0
+missing_values,Unnamed: 40,2.0
+missing_values,Unnamed: 41,2.0
+missing_values,Unnamed: 42,2130.0
+missing_values,22,3.0
+missing_values,Unnamed: 44,2130.0
+missing_values,23,3.0
+constant_feature,Unnamed: 9,
+constant_feature,Unnamed: 31,
+constant_feature,Unnamed: 42,
+constant_feature,Unnamed: 44,

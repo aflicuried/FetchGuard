@@ -1,0 +1,5 @@
+type,assumed_sampling_hz,min_required_min,percent,text
+duration_unknown,4.0,10.0,,
+summary_valid_percentage,,,100.0,
+guideline_citation,,,,"CTG interpretation principles per standard obstetric guidelines: baseline 110–160 bpm, assessment of variability, accelerations, and decelerations; context-dependent clinical correlation required."
+recommendations,,,,Capture recording duration explicitly to meet minimal analysis requirements
