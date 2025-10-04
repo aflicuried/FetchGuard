@@ -232,6 +232,7 @@ def train_main():
 
     df = load_engineered_or_clean()
     X, y = get_features_and_target(df, target=args.target)
+    y = y - 1
 
     groups = None
     if args.doctor_col and args.doctor_col in df.columns:
