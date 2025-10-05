@@ -40,7 +40,7 @@ logger = logging.getLogger(__name__)
 
 def load_engineered_or_clean(
     fe_path: Path = Path("data/processed/ctg_with_features.csv"),
-    clean_path: Path = Path("data/processed/ctg_clean.csv"),
+    clean_path: Path = Path("data/processed/ctg_normalized.csv"),
 ) -> pd.DataFrame:
     #if fe_path.exists():
         #return pd.read_csv(fe_path)
@@ -237,8 +237,9 @@ def train_main():
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-    if args.mlflow_uri:
-        mlflow.set_tracking_uri(args.mlflow_uri)
+    # 设置 MLflow tracking URI 为 models/mlruns
+    mlflow_tracking_uri = args.mlflow_uri or "file:./models/mlruns"
+    mlflow.set_tracking_uri(mlflow_tracking_uri)
     mlflow.set_experiment(args.mlflow_exp)
 
     df = load_engineered_or_clean()
