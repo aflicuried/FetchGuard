@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Pycharm workspace/FetalGuard/models/mlruns/119575330358238880/fac8701ef5d641639691df7f76104e53/artifacts
+end_time: 1759660506063
+entry_point_name: ''
+experiment_id: '119575330358238880'
+lifecycle_stage: active
+run_id: fac8701ef5d641639691df7f76104e53
+run_name: mlp-20251005_183426
+run_uuid: fac8701ef5d641639691df7f76104e53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759660466681
+status: 3
+tags: []
+user_id: '30659'

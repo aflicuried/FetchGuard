@@ -1,0 +1,105 @@
+{
+  "model_type": "MLP",
+  "architecture": {
+    "input_dim": 21,
+    "hidden_dims": [
+      256,
+      128,
+      64
+    ],
+    "output_dim": 3,
+    "dropout": 0.2
+  },
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "batch_size": 64,
+    "max_epochs": 200,
+    "early_stopping_patience": 15
+  },
+  "data": {
+    "use_normalized": false,
+    "data_path": "data/processed/ctg_clean.csv",
+    "num_samples": 2115,
+    "num_features": 21,
+    "feature_names": [
+      "LB",
+      "AC",
+      "FM",
+      "UC",
+      "DL",
+      "DS",
+      "DP",
+      "ASTV",
+      "MSTV",
+      "ALTV",
+      "MLTV",
+      "Width",
+      "Min",
+      "Max",
+      "Nmax",
+      "Nzeros",
+      "Mode",
+      "Mean",
+      "Median",
+      "Variance",
+      "Tendency"
+    ]
+  },
+  "cross_validation": {
+    "method": "StratifiedKFold",
+    "n_splits": 5,
+    "random_state": 42
+  },
+  "performance": {
+    "cv_accuracy": 0.9210401891252955,
+    "cv_balanced_accuracy": 0.8165579467530548,
+    "fold_results": [
+      {
+        "fold": 1,
+        "accuracy": 0.9314420803782506,
+        "balanced_accuracy": 0.8592791029141553
+      },
+      {
+        "fold": 2,
+        "accuracy": 0.9101654846335697,
+        "balanced_accuracy": 0.8045575532773513
+      },
+      {
+        "fold": 3,
+        "accuracy": 0.9219858156028369,
+        "balanced_accuracy": 0.8350549833308455
+      },
+      {
+        "fold": 4,
+        "accuracy": 0.9196217494089834,
+        "balanced_accuracy": 0.7697118972981043
+      },
+      {
+        "fold": 5,
+        "accuracy": 0.9219858156028369,
+        "balanced_accuracy": 0.8141861969448176
+      }
+    ]
+  },
+  "medical_metrics": {
+    "pathological_sensitivity": 0.7942857142857143,
+    "pathological_specificity": 0.9953608247422681,
+    "pathological_ppv": 0.9391891891891891,
+    "pathological_npv": 0.9816980172852059,
+    "suspect_sensitivity": 0.678082191780822,
+    "suspect_specificity": 0.9692814042786615,
+    "normal_sensitivity": 0.9775485436893204,
+    "normal_specificity": 0.7815845824411135,
+    "overall_accuracy": 0.9210401891252955,
+    "balanced_accuracy": 0.8166388165852855,
+    "total_clinical_cost": 655.0
+  },
+  "metadata": {
+    "timestamp": "20251005_183641",
+    "device": "cpu",
+    "framework": "PyTorch",
+    "model_path": "models\\saved\\mlp_20251005_183641\\model.pth",
+    "evaluation_path": "reports\\new\\evaluation\\mlp_20251005_183641"
+  }
+}

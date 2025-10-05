@@ -1,0 +1,34 @@
+{
+  "Normal_sensitivity": 0.9654126213592233,
+  "Normal_specificity": 0.892933618843683,
+  "Normal_ppv": 0.9695307739183425,
+  "Normal_npv": 0.879746835443038,
+  "Suspect_sensitivity": 0.8047945205479452,
+  "Suspect_specificity": 0.9698299506308283,
+  "Suspect_ppv": 0.8103448275862069,
+  "Suspect_npv": 0.9687671232876712,
+  "Pathological_sensitivity": 0.92,
+  "Pathological_specificity": 0.9881443298969073,
+  "Pathological_ppv": 0.875,
+  "Pathological_npv": 0.9927498705334024,
+  "overall_accuracy": 0.9394799054373523,
+  "balanced_accuracy": 0.8967357139690563,
+  "total_clinical_cost": 380.0,
+  "confusion_matrix": [
+    [
+      1591,
+      47,
+      10
+    ],
+    [
+      44,
+      235,
+      13
+    ],
+    [
+      6,
+      8,
+      161
+    ]
+  ]
+}

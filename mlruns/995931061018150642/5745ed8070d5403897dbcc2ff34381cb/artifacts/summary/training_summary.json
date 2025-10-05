@@ -1,0 +1,18 @@
+{
+  "timestamp": "20251005_152920",
+  "parameters": {
+    "algo": "rf",
+    "use_smote": false,
+    "class_weight": null,
+    "cv": 5,
+    "random_state": 42,
+    "target": "NSP",
+    "use_normalized": false
+  },
+  "metrics": {
+    "acc": 0.9390070921985817,
+    "bacc": 0.863856684190942,
+    "f1_macro": 0.8853238644494669,
+    "roc_auc_ovr": 0.9864857781463483
+  }
+}

@@ -1,0 +1,48 @@
+
+=== MEDICAL MODEL EVALUATION REPORT ===
+Model: XGB_20251005_180634_CV
+Evaluation Date: 2025-10-05 18:06:43
+
+=== CLINICAL PERFORMANCE SUMMARY ===
+
+CRITICAL PATHOLOGICAL CLASS (Class 2) PERFORMANCE:
+- Sensitivity: 0.949
+  → Ability to detect pathological cases (CRITICAL for patient safety)
+- Specificity: 0.992
+  → Ability to avoid false alarms
+- PPV: 0.917
+  → Probability that positive prediction is correct
+- NPV: 0.995
+  → Probability that negative prediction is correct
+
+SUSPECT CLASS (Class 1) PERFORMANCE:
+- Sensitivity: 0.829
+- Specificity: 0.978
+- PPV: 0.858
+- NPV: 0.973
+
+NORMAL CLASS (Class 0) PERFORMANCE:
+- Sensitivity: 0.973
+- Specificity: 0.897
+- PPV: 0.971
+- NPV: 0.905
+
+=== OVERALL PERFORMANCE ===
+- Overall Accuracy: 0.951
+- Balanced Accuracy: 0.917
+
+=== COST-SENSITIVE ANALYSIS ===
+- Total Clinical Cost: 280.0
+
+=== PATIENT SAFETY ASSESSMENT ===
+- Safety Level: GOOD
+- Comment: Acceptable risk of missing pathological cases
+
+=== CONFUSION MATRIX ===
+         Predicted
+Actual   Normal  Suspect  Pathological
+Normal        1604      36       8  
+Suspect         43     242       7  
+Pathological     5       4     166  
+
+==================================================

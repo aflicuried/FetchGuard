@@ -1,0 +1,45 @@
+
+=== NEURAL NETWORK MEDICAL EVALUATION REPORT ===
+Model: MLP_20251005_183426_CV
+Evaluation Date: 2025-10-05 18:34:51
+
+=== CLINICAL PERFORMANCE SUMMARY ===
+
+CRITICAL PATHOLOGICAL CLASS (Class 2) PERFORMANCE:
+- Sensitivity: 0.800
+  → Ability to detect pathological cases (CRITICAL for patient safety)
+- Specificity: 0.993
+- PPV: 0.909
+- NPV: 0.982
+
+SUSPECT CLASS (Class 1) PERFORMANCE:
+- Sensitivity: 0.750
+- Specificity: 0.961
+- PPV: 0.753
+- NPV: 0.960
+
+NORMAL CLASS (Class 0) PERFORMANCE:
+- Sensitivity: 0.967
+- Specificity: 0.835
+- PPV: 0.954
+- NPV: 0.876
+
+=== OVERALL PERFORMANCE ===
+- Overall Accuracy: 0.923
+- Balanced Accuracy: 0.839
+
+=== COST-SENSITIVE ANALYSIS ===
+- Total Clinical Cost: 638.0
+
+=== PATIENT SAFETY ASSESSMENT ===
+- Safety Level: MODERATE
+- Comment: Moderate risk - consider additional screening
+
+=== CONFUSION MATRIX ===
+         Predicted
+Actual   Normal  Suspect  Pathological
+Normal        1593      49       6  
+Suspect         65     219       8  
+Pathological    12      23     140  
+
+==================================================

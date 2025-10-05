@@ -1,0 +1,48 @@
+
+=== MEDICAL MODEL EVALUATION REPORT ===
+Model: SVM_20251005_175237_CV
+Evaluation Date: 2025-10-05 17:52:39
+
+=== CLINICAL PERFORMANCE SUMMARY ===
+
+CRITICAL PATHOLOGICAL CLASS (Class 2) PERFORMANCE:
+- Sensitivity: 0.823
+  → Ability to detect pathological cases (CRITICAL for patient safety)
+- Specificity: 0.967
+  → Ability to avoid false alarms
+- PPV: 0.692
+  → Probability that positive prediction is correct
+- NPV: 0.984
+  → Probability that negative prediction is correct
+
+SUSPECT CLASS (Class 1) PERFORMANCE:
+- Sensitivity: 0.890
+- Specificity: 0.864
+- PPV: 0.512
+- NPV: 0.980
+
+NORMAL CLASS (Class 0) PERFORMANCE:
+- Sensitivity: 0.840
+- Specificity: 0.968
+- PPV: 0.989
+- NPV: 0.631
+
+=== OVERALL PERFORMANCE ===
+- Overall Accuracy: 0.845
+- Balanced Accuracy: 0.851
+
+=== COST-SENSITIVE ANALYSIS ===
+- Total Clinical Cost: 860.0
+
+=== PATIENT SAFETY ASSESSMENT ===
+- Safety Level: MODERATE
+- Comment: Moderate risk - consider additional screening
+
+=== CONFUSION MATRIX ===
+         Predicted
+Actual   Normal  Suspect  Pathological
+Normal        1384     221      43  
+Suspect         11     260      21  
+Pathological     4      27     144  
+
+==================================================
