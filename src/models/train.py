@@ -42,8 +42,8 @@ def load_engineered_or_clean(
     fe_path: Path = Path("data/processed/ctg_with_features.csv"),
     clean_path: Path = Path("data/processed/ctg_clean.csv"),
 ) -> pd.DataFrame:
-    if fe_path.exists():
-        return pd.read_csv(fe_path)
+    #if fe_path.exists():
+        #return pd.read_csv(fe_path)
     if clean_path.exists():
         return pd.read_csv(clean_path)
     raise FileNotFoundError("No processed dataset found. Run scripts/preprocess.py first.")
@@ -57,7 +57,18 @@ def get_features_and_target(df: pd.DataFrame, target: str = "NSP") -> Tuple[pd.D
     if (~mask).any():
         logger.info("Dropping %d rows with NaN target", int((~mask).sum()))
     y = y.loc[mask].astype(int)
-    X = df.loc[mask].select_dtypes(include=[np.number]).drop(columns=[col for col in [target] if col in df], errors="ignore")
+
+    # 排除所有标签列（NSP 和 CLASS）
+    exclude_cols = [target, 'CLASS']
+    X = df.loc[mask].select_dtypes(include=[np.number]).drop(
+        columns=[col for col in exclude_cols if col in df],
+        errors="ignore"
+    )
+
+    # 打印使用的特征，便于验证
+    logger.info(f"Number of features: {X.shape[1]}")
+    logger.info(f"CLASS excluded: {'CLASS' not in X.columns}")
+
     return X, y
 
 
@@ -232,7 +243,10 @@ def train_main():
 
     df = load_engineered_or_clean()
     X, y = get_features_and_target(df, target=args.target)
+
+    # 将标签从 [1,2,3] 映射到 [0,1,2]
     y = y - 1
+    logger.info(f"Target classes after remapping: {np.unique(y)}")
 
     groups = None
     if args.doctor_col and args.doctor_col in df.columns:
